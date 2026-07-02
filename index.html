@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Yoav Mayer: AI Automation Engineer</title>
+<meta name="description" content="Yoav Mayer, AI Automation Engineer. Agentic systems and LLM ops: agent observability on npm, unattended production pipelines, fleet cost audits, and a production speech pipeline.">
+<style>
+  :root {
+    --bg: #0e0b13;
+    --panel: #171122;
+    --panel-2: #1d1629;
+    --line: #2c2340;
+    --text: #ece7f4;
+    --muted: #a99ec0;
+    --accent: #e94ba8;   /* magenta, from the observer dashboard itself */
+    --mint: #3ddc97;     /* live / shipped */
+    --amber: #f4b942;    /* internal / methodology */
+    --sans: system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    font-size: 17px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--text); }
+  a:focus-visible, button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 3px;
+  }
+  .wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- top bar ---------- */
+  .topbar {
+    display: flex; justify-content: space-between; align-items: center;
+    flex-wrap: wrap; gap: 10px 24px;
+    padding: 22px 0; border-bottom: 1px solid var(--line);
+  }
+  .topbar .site { font-family: var(--mono); font-size: 13px; color: var(--muted); letter-spacing: .04em; }
+  .topbar nav { display: flex; gap: 20px; }
+  .topbar nav a {
+    font-family: var(--mono); font-size: 13px; color: var(--muted);
+    text-decoration: none; letter-spacing: .04em;
+  }
+  .topbar nav a:hover { color: var(--text); }
+
+  /* ---------- hero ---------- */
+  .hero { padding: 88px 0 72px; }
+  .statusline {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--mono); font-size: 13px; letter-spacing: .05em;
+    color: var(--mint); margin-bottom: 26px;
+  }
+  .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--mint); flex: none; }
+  .dot.magenta { background: var(--accent); }
+  .dot.amber { background: var(--amber); }
+  .hero h1 {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
+  }
+  .hero .role {
+    margin-top: 14px;
+    font-size: clamp(1.15rem, 2.6vw, 1.45rem);
+    font-weight: 600; letter-spacing: -0.01em;
+  }
+  .hero .role em { font-style: normal; color: var(--accent); }
+  .hero .lede {
+    margin-top: 20px; max-width: 620px;
+    color: var(--muted); font-size: 1.06rem;
+  }
+
+  /* ---------- shared card bits ---------- */
+  .cards { display: flex; flex-direction: column; gap: 28px; padding-bottom: 32px; }
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 34px;
+    transition: border-color .18s ease, transform .18s ease;
+  }
+  .card:hover { border-color: #453760; transform: translateY(-2px); }
+  .card .status {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-family: var(--mono); font-size: 12.5px; letter-spacing: .05em;
+    color: var(--muted); margin-bottom: 16px;
+  }
+  .card h2 { font-size: 1.5rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+  .card p { color: var(--muted); max-width: 60ch; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .03em;
+    color: var(--text); background: var(--panel-2);
+    border: 1px solid var(--line); border-radius: 999px;
+    padding: 4px 12px; white-space: nowrap;
+  }
+  .proof { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .proof a {
+    font-family: var(--mono); font-size: 13.5px;
+    color: var(--accent); text-decoration: none;
+    overflow-wrap: anywhere;
+  }
+  .proof a:hover { text-decoration: underline; }
+  .proof a::before { content: "↗ "; color: var(--muted); }
+
+  /* flagship rows: text + screenshot */
+  .card.flagship { display: grid; grid-template-columns: 1fr 1fr; gap: 36px; align-items: center; }
+  .card.flagship.flip .shot { order: -1; }
+  .shot { min-width: 0; }
+  .shot img {
+    display: block; width: 100%; height: auto;
+    border-radius: 10px; border: 1px solid var(--line);
+  }
+  .shot figcaption {
+    margin-top: 10px; font-family: var(--mono);
+    font-size: 12px; color: var(--muted); letter-spacing: .03em;
+  }
+
+  /* text-only pair */
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .note { margin-top: 18px; font-family: var(--mono); font-size: 12.5px; color: var(--muted); }
+
+  /* ---------- contact ---------- */
+  .contact { border-top: 1px solid var(--line); margin-top: 40px; padding: 56px 0 64px; }
+  .contact h2 { font-size: 1.3rem; font-weight: 700; letter-spacing: -0.01em; margin-bottom: 20px; }
+  .contact-row { display: flex; flex-wrap: wrap; gap: 14px; }
+  .contact-row a {
+    font-family: var(--mono); font-size: 14px; text-decoration: none;
+    color: var(--text); background: var(--panel);
+    border: 1px solid var(--line); border-radius: 10px;
+    padding: 12px 18px;
+    transition: border-color .18s ease;
+  }
+  .contact-row a:hover { border-color: var(--accent); }
+  .contact-row a span { color: var(--muted); margin-right: 8px; }
+  .fineprint {
+    margin-top: 30px; font-family: var(--mono);
+    font-size: 12px; color: var(--muted); letter-spacing: .03em;
+  }
+
+  @media (max-width: 860px) {
+    .card.flagship { grid-template-columns: 1fr; }
+    .card.flagship.flip .shot { order: 0; }
+    .pair { grid-template-columns: 1fr; }
+    .hero { padding: 60px 0 48px; }
+    .card { padding: 26px; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .card, .contact-row a { transition: none; }
+    .card:hover { transform: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="topbar">
+    <span class="site">yoavmayer.github.io</span>
+    <nav aria-label="Contact links">
+      <a href="https://github.com/YoavMayer">github</a>
+      <a href="https://www.linkedin.com/in/yoavmayer/">linkedin</a>
+      <a href="mailto:yoavmayer@gmail.com">email</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <p class="statusline"><span class="dot" aria-hidden="true"></span>every card below links to a public artifact you can check</p>
+    <h1>Yoav Mayer</h1>
+    <p class="role">AI Automation Engineer: <em>Agentic Systems &amp; LLM Ops</em></p>
+    <p class="lede">Senior engineer who ships AI agents into production, and builds the observability, approval gates, and cost discipline that keep them there.</p>
+  </section>
+
+  <main class="cards">
+
+    <!-- 1 · observer dashboard -->
+    <article class="card flagship">
+      <div>
+        <p class="status"><span class="dot" aria-hidden="true"></span>shipped · npm v0.12.4 · real external users</p>
+        <h2>babysitter-observer-dashboard</h2>
+        <p>Real-time observability dashboard for AI-agent orchestration runs. Streams live run state over Server-Sent Events, with breakpoint approvals and quality gates so a human can supervise an agent mid-run. Authored end to end and published publicly on npm.</p>
+        <div class="chips">
+          <span class="chip">TypeScript</span>
+          <span class="chip">Next.js</span>
+          <span class="chip">Server-Sent Events</span>
+          <span class="chip">Node ≥ 20</span>
+        </div>
+        <div class="proof">
+          <a href="https://www.npmjs.com/package/@yoavmayer/babysitter-observer-dashboard">npmjs.com/package/@yoavmayer/babysitter-observer-dashboard</a>
+          <a href="https://github.com/YoavMayer/babysitter-observer-dashboard">github.com/YoavMayer/babysitter-observer-dashboard</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/observer-dashboard.png" width="1440" height="900" alt="Observer dashboard: 143 total runs, live status cards, and pending approval gates on a dark interface." loading="lazy">
+        <figcaption>live instance · private run names redacted</figcaption>
+      </figure>
+    </article>
+
+    <!-- 2 · autonomous ops pipeline -->
+    <article class="card flagship flip">
+      <div>
+        <p class="status"><span class="dot magenta" aria-hidden="true"></span>in production · runs nightly, unattended</p>
+        <h2>Autonomous ops pipeline</h2>
+        <p>Nightly self-driving, LLM-orchestrated runs that finalize results and redeploy a live production web app with no human in the loop: scheduled cron triggers, multi-agent workflows, and quality gates that hold a change back when confidence drops. The app it operates is a live tournament results board (Hebrew, RTL), rebuilt and republished every night.</p>
+        <div class="chips">
+          <span class="chip">LLM orchestration</span>
+          <span class="chip">multi-agent workflows</span>
+          <span class="chip">GitHub Actions + cron</span>
+          <span class="chip">quality gates</span>
+        </div>
+        <div class="proof">
+          <a href="https://yoavmayer.github.io/wc26-pool-board/">yoavmayer.github.io/wc26-pool-board: the live auto-built site</a>
+          <a href="https://github.com/YoavMayer/wc26-pool-board">github.com/YoavMayer/wc26-pool-board</a>
+        </div>
+      </div>
+      <figure class="shot">
+        <img src="assets/wc26-board.png" width="1440" height="700" alt="Live tournament results board in Hebrew with a color-coded predictions grid, rebuilt nightly by the pipeline." loading="lazy">
+        <figcaption>the live board the pipeline rebuilds each night</figcaption>
+      </figure>
+    </article>
+
+    <div class="pair">
+
+      <!-- 3 · fleet cost & context audits -->
+      <article class="card">
+        <p class="status"><span class="dot amber" aria-hidden="true"></span>methodology · internal tooling</p>
+        <h2>Agent-fleet cost &amp; context audits</h2>
+        <p>Token and context auditing for fleets of LLM coding agents: per-session accounting, context-surface audits (instruction files, memory, tool schemas), idle-burn and retry-loop detection, and model-routing reviews that compare cost-per-result rather than raw benchmarks. Runs as read-only dashboards and scheduled briefs that surface only what needs a human.</p>
+        <div class="chips">
+          <span class="chip">token accounting</span>
+          <span class="chip">context audits</span>
+          <span class="chip">model routing</span>
+          <span class="chip">read-only dashboards</span>
+        </div>
+        <p class="note">internal tooling: methodology write-up available on request</p>
+      </article>
+
+      <!-- 4 · podcast-intel -->
+      <article class="card">
+        <p class="status"><span class="dot" aria-hidden="true"></span>open source · public repo</p>
+        <h2>Production speech pipeline</h2>
+        <p>podcast-intel: a Python audio-intelligence pipeline. Whisper (faster-whisper) transcription with GPU/CPU fallback, PyAnnote speaker diarization, and a calibrated 39-metric quality-scoring model across five domains, built and tested end to end on real episodes.</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">faster-whisper</span>
+          <span class="chip">PyAnnote</span>
+          <span class="chip">39-metric scoring</span>
+        </div>
+        <div class="proof">
+          <a href="https://github.com/YoavMayer/podcast-intel">github.com/YoavMayer/podcast-intel</a>
+        </div>
+      </article>
+
+    </div>
+
+  </main>
+
+  <footer class="contact" id="contact">
+    <h2>Contact</h2>
+    <div class="contact-row">
+      <a href="https://github.com/YoavMayer"><span>github</span>github.com/YoavMayer</a>
+      <a href="https://www.linkedin.com/in/yoavmayer/"><span>linkedin</span>linkedin.com/in/yoavmayer</a>
+      <a href="mailto:yoavmayer@gmail.com"><span>email</span>yoavmayer@gmail.com</a>
+    </div>
+    <p class="fineprint">© 2026 Yoav Mayer · every claim above links to a public artifact</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
