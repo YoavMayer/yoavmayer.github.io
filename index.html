@@ -3,8 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yoav Mayer: AI Automation Engineer</title>
-<meta name="description" content="Yoav Mayer, AI Automation Engineer. Agentic systems and LLM ops: agent observability on npm, unattended production pipelines, fleet cost audits, and a production speech pipeline.">
+<title>Yoav Mayer: AI Developer &amp; C#/.NET Engineer</title>
+<meta name="description" content="Yoav Mayer, AI Developer with a decade of production C#/.NET and multi-protocol systems, team and dev lead since 2019. Builds AI-agent tooling end to end: agent observability on npm, unattended production pipelines, and a Python speech pipeline.">
+<meta property="og:title" content="Yoav Mayer, AI Developer: C#/.NET, ASP.NET Core, LLM and agent tooling">
+<meta property="og:description" content="Yoav Mayer, AI Developer with a decade of production C#/.NET and multi-protocol systems, team and dev lead since 2019. Builds AI-agent tooling end to end: agent observability on npm, unattended production pipelines, and a Python speech pipeline.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yoavmayer.github.io/">
+<meta property="og:image" content="https://yoavmayer.github.io/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
 <style>
   :root {
     --bg: #0e0b13;
@@ -75,6 +81,16 @@
     margin-top: 20px; max-width: 620px;
     color: var(--muted); font-size: 1.06rem;
   }
+  .hero .cv { margin-top: 26px; }
+  .cv-download {
+    display: inline-block;
+    font-family: var(--mono); font-size: 13.5px; letter-spacing: .04em;
+    color: var(--text); text-decoration: none;
+    background: var(--panel); border: 1px solid var(--accent);
+    border-radius: 10px; padding: 11px 18px;
+    transition: background .18s ease;
+  }
+  .cv-download:hover { background: var(--panel-2); }
 
   /* ---------- shared card bits ---------- */
   .cards { display: flex; flex-direction: column; gap: 28px; padding-bottom: 32px; }
@@ -174,8 +190,9 @@
   <section class="hero">
     <p class="statusline"><span class="dot" aria-hidden="true"></span>every card below links to a public artifact you can check</p>
     <h1>Yoav Mayer</h1>
-    <p class="role">AI Automation Engineer: <em>Agentic Systems &amp; LLM Ops</em></p>
-    <p class="lede">Senior engineer who ships AI agents into production, and builds the observability, approval gates, and cost discipline that keep them there.</p>
+    <p class="role">AI Developer &amp; Automation Team Lead: <em>C#/.NET · Python · AI-Agent Tooling</em></p>
+    <p class="lede">A decade of production C#/.NET and multi-protocol systems; team and dev lead since 2019 (Tech Lead &rarr; PM/Scrum, 5+ years of delivery ownership). Now building AI-agent tooling end to end: the observability, approval gates, and cost discipline that keep agents in production.</p>
+    <p class="cv"><a class="cv-download" href="assets/yoav-mayer-cv.pdf">Download CV (PDF)</a></p>
   </section>
 
   <main class="cards">
@@ -183,9 +200,9 @@
     <!-- 1 · observer dashboard -->
     <article class="card flagship">
       <div>
-        <p class="status"><span class="dot" aria-hidden="true"></span>shipped · npm v0.12.4 · real external users</p>
+        <p class="status"><span class="dot" aria-hidden="true"></span>published on npm · real external users</p>
         <h2>babysitter-observer-dashboard</h2>
-        <p>Real-time observability dashboard for AI-agent orchestration runs. Streams live run state over Server-Sent Events, with breakpoint approvals and quality gates so a human can supervise an agent mid-run. Authored end to end and published publicly on npm.</p>
+        <p>Real-time observability dashboard for AI-agent orchestration runs. Streams live run state over Server-Sent Events, with breakpoint approvals and quality gates so a human can supervise an agent mid-run. Authored end to end and published publicly on npm: the same API/SDK integration discipline from a decade of production .NET, applied to live agent runs.</p>
         <div class="chips">
           <span class="chip">TypeScript</span>
           <span class="chip">Next.js</span>
@@ -226,9 +243,23 @@
       </figure>
     </article>
 
+    <!-- 3 · day job: automation & SW infrastructure team lead -->
+    <article class="card">
+      <p class="status"><span class="dot" aria-hidden="true"></span>day job · 2018&ndash;present · team of 5</p>
+      <h2>Automation &amp; SW Infrastructure Team Lead · Arad</h2>
+      <p>Lead/PM (Scrum) for a 5-engineer R&amp;D team. Architected <strong>Arad Tuner</strong>, a distributed .NET microservices calibration platform (ASP.NET Core Web API, gRPC core, BLE bridges, MongoDB, Docker), and <strong>LabTester</strong>, a hardware-in-the-loop framework driving 90%+ regression automation. 40+ internal NuGet packages, 9 comms protocols, .NET 8, full Azure DevOps CI/CD migration.</p>
+      <div class="chips">
+        <span class="chip">C# / .NET 8</span>
+        <span class="chip">ASP.NET Core</span>
+        <span class="chip">gRPC</span>
+        <span class="chip">Azure DevOps</span>
+        <span class="chip">Team Lead / Scrum</span>
+      </div>
+    </article>
+
     <div class="pair">
 
-      <!-- 3 · fleet cost & context audits -->
+      <!-- 4 · fleet cost & context audits -->
       <article class="card">
         <p class="status"><span class="dot amber" aria-hidden="true"></span>methodology · internal tooling</p>
         <h2>Agent-fleet cost &amp; context audits</h2>
@@ -242,7 +273,7 @@
         <p class="note">internal tooling: methodology write-up available on request</p>
       </article>
 
-      <!-- 4 · podcast-intel -->
+      <!-- 5 · podcast-intel -->
       <article class="card">
         <p class="status"><span class="dot" aria-hidden="true"></span>open source · public repo</p>
         <h2>Production speech pipeline</h2>
