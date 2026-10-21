@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Yoav Mayer, AI engineer</title>
-<meta name="description" content="Yoav Mayer builds automation and integrations between business systems with AI agents. Freelance first, starting with a free intro call.">
+<meta name="description" content="Yoav Mayer connects the software a business already uses, so the manual steps between programs go away. Automation and integrations, built with AI agents under his direction. The first call is free.">
 <meta property="og:title" content="Yoav Mayer, AI engineer">
 <meta property="og:description" content="Independent engineer for automation and integrations. Projects, code and how to reach me.">
 <meta property="og:type" content="website">
@@ -148,6 +148,19 @@
   .card.short h3 { font-size: 1.2rem; }
   .card.short .links { margin-top: 10px; }
   .strip p { color: var(--muted); max-width: 64ch; }
+  .card .shot { margin: 0 0 18px; }
+  .parts { margin-top: 6px; max-width: 64ch; }
+  .parts dt {
+    font-family: var(--mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase;
+    color: var(--accent); margin-top: 10px;
+  }
+  .parts dt:first-child { margin-top: 0; }
+  .parts dd { margin: 2px 0 0; }
+  @media (min-width: 700px) {
+    .parts { display: grid; grid-template-columns: 120px 1fr; gap: 10px 18px; }
+    .parts dt { margin-top: 3px; }
+    .parts dd { margin: 0; }
+  }
 </style>
 </head>
 <body>
@@ -157,6 +170,7 @@
     <span class="site">yoavmayer.github.io</span>
     <nav aria-label="Sections">
       <a href="#projects">projects</a>
+      <a href="#clients">clients</a>
       <a href="#arad">arad</a>
       <a href="#contact">contact</a>
     </nav>
@@ -164,10 +178,11 @@
 
   <section class="hero">
     <h1>Yoav Mayer</h1>
-    <p class="role">I'm an independent consultant. I build automation and integrations between a business's systems, and AI agents write the code under my direction.</p>
-    <p class="open">Usually that means linking one piece of software to another over its API, and logging each step so the people who run the process can see what happened.</p>
-    <p class="open">Freelance projects come first, though I'm open to a role too. It starts with a free intro call. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
-    <p class="lede">I worked in C#/.NET at Arad from 2014 to 2026, the last seven years as team leader of its automation and software infrastructure team. I started building with LLMs in early 2025 and went independent in February 2026.</p>
+    <p class="role">I connect the software a business already uses, so the manual steps between programs go away and the work gets simpler and faster.</p>
+    <p class="open">I bring automation, integrations, AI agents and skills into the way a business already works, without breaking the product or the systems it runs today. At Arad I built the regression tests that let us change an old product's core safely.</p>
+    <p class="open">Usually that means linking one program to another over its API, and logging each step so the people who run the process can see what happened. AI agents write the code under my direction.</p>
+    <p class="open">I work freelance, and the first call is free: we look at one of your processes together, and I tell you if and how it can be simplified. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
+    <p class="lede">I worked in C#/.NET at Arad from 2014 to 2026. I started building with LLMs in early 2025 and went independent in February 2026.</p>
     <p class="stack">These days it's mostly Python and TypeScript, with the Claude API and Claude Code.</p>
   </section>
 
@@ -176,65 +191,87 @@
     <div class="cards">
 
       <article class="card">
-        <p class="status">Tested end to end on the client's own accounts</p>
+        <figure class="shot"><img src="assets/illus-invoicing.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop showing a board of invoice rows, a dotted path to an invoice with a check mark, and one approve button."></figure>
+        <p class="status">In production</p>
         <h3>Invoicing for a small business</h3>
-        <p>The owner of a small business invoiced by hand. I built a JavaScript service on Cloudflare Workers that makes each invoice from her monday.com CRM and waits for a person to approve it before her invoicing system issues it.</p>
-        <p class="body">She told me 20 invoices used to take her a day, sometimes two, at more than 10 clicks each. Now there's one button, to confirm the exact text before it goes to the customer, and she may drop that step too once she trusts it.</p>
+        <dl class="parts">
+          <dt>For</dt><dd>The owner of a small business.</dd>
+          <dt>The problem</dt><dd>She invoiced by hand. She told me 20 invoices used to take her a day, sometimes two, at more than 10 clicks each.</dd>
+          <dt>What I did</dt><dd>I built a service that makes each invoice from her monday.com CRM and waits for her approval before her invoicing system issues it.</dd>
+          <dt>Result</dt><dd>Now there's one button, to confirm the exact text before it goes to the customer, and she may drop that step too once she trusts it.</dd>
+        </dl>
       </article>
 
       <article class="card">
-        <p class="status">Open source, three PRs merged upstream</p>
+        <figure class="shot"><img src="assets/illus-observer.svg" width="1200" height="630" loading="lazy" alt="Illustration: a drawn laptop showing a blurred screenshot of my own dashboard, with check marks, a progress card and a badge for a run that is waiting for a person."></figure>
+        <p class="status">Open source, three of my changes merged</p>
         <h3>Babysitter observer dashboard</h3>
-        <p>Babysitter is an open-source agent framework with 1,855 stars on GitHub. A run stops at the steps where a person has to approve, and I built the dashboard where you watch the run and give that approval.</p>
-        <p class="body">Approvals clicked in the old package never reached the run, because it saved them under a key the runtime doesn't read, and nothing reported an error. My PR 1413 swapped in my dashboard in August 2026 with 1,290 tests passing.</p>
+        <dl class="parts">
+          <dt>For</dt><dd>Teams that hand long jobs to AI agents with Babysitter, an open-source tool with 1,855 stars on GitHub.</dd>
+          <dt>The problem</dt><dd>The agents stop at the steps where a person has to say yes. In the old dashboard that approval never reached them, and nothing showed an error.</dd>
+          <dt>What I did</dt><dd>I built a new dashboard where you watch the agents work and give the approval. In August 2026 the project replaced the old one with mine.</dd>
+          <dt>Result</dt><dd>An approval given on the dashboard now reaches the agents.</dd>
+        </dl>
         <p class="links">
           <a href="https://github.com/a5c-ai/babysitter/tree/main/packages/observer-dashboard">Dashboard in the Babysitter repo</a>
-          <a href="https://github.com/a5c-ai/babysitter/pull/1413">PR 1413</a>
+          <a href="https://github.com/a5c-ai/babysitter/pull/1413">The change that swapped it in</a>
         </p>
-        <figure class="shot">
-          <img src="assets/observer-dashboard.png" width="1440" height="900" alt="The observer dashboard: runs grouped into Needs you, Working, Stalled and Done, each waiting run with its own Answer button. Run names are blurred." loading="lazy">
-          <figcaption>my instance, run names blurred</figcaption>
-        </figure>
       </article>
 
       <article class="card">
+        <figure class="shot"><img src="assets/illus-interpretation.svg" width="1200" height="630" loading="lazy" alt="Illustration: a microphone on a stage, a speech bubble with a Hebrew letter and one with an English letter, a sound wave into an earpiece, and a glossary with a check mark."></figure>
         <p class="status">In progress for an upcoming medical conference</p>
         <h3>Live Hebrew to English interpretation</h3>
-        <p>The lecturers at a medical conference speak Hebrew, and the English speakers in the hall hear them in English through an earpiece while they talk.</p>
-        <p class="body">A language model, called over its API, checks every clause against a medical glossary before it is read out. The model is a swappable part: today it is Claude Sonnet, and Gemini or an OpenAI model can take its place. When a check fails, the plain draft plays instead of a gap. In my latest test on four talks it got 184 of the 185 glossary terms right.</p>
+        <p>At an upcoming medical conference the lecturers will speak Hebrew, and the people in the hall who only speak English will hear each talk in English through an earpiece while the lecturer is still talking. I'm building that interpretation.</p>
+        <p class="body">A language model, called over its API, checks every clause against a medical glossary before it is read out. The model is a swappable part: today it is Claude Sonnet, and Gemini or an OpenAI model can take its place. When a check fails, the plain draft plays, so the earpiece doesn't go quiet.</p>
+        <p class="problem">In my latest test on four talks it got 184 of the 185 glossary terms right.</p>
       </article>
 
-      <article class="card short">
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-chatbot.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a phone with a short chat, a shield with a check on one answer, a hand-off to a person with a headset, and a small shop."></figure>
+        <h3>A chatbot for a small business</h3>
+        <p>For a small business, I mapped the process behind its chatbot and set the direction for how it should work. The production build is not mine.</p>
+      </article>
+
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-research.svg" width="1200" height="630" loading="lazy" alt="Illustration: a report with each claim ticked and one crossed out, source sheets, a magnifier, a moon for the nightly run and a rewrite loop."></figure>
         <h3>Research reports that get fact-checked</h3>
-        <p>I give it a topic and one agent writes a sourced report. A second agent goes through the report claim by claim against the sources, and if too many fail, it goes back for a rewrite. It runs by itself every night on the next topic in the queue.</p>
+        <dl class="parts">
+          <dt>For</dt><dd>My own research. I give it a topic.</dd>
+          <dt>The problem</dt><dd>A report written by AI can state things its sources don't say.</dd>
+          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It runs by itself every night on the next topic in the queue.</dd>
+          <dt>Result</dt><dd>62 reports checked so far.</dd>
+        </dl>
         <p class="links"><span class="private">private repo</span></p>
       </article>
 
-      <article class="card short">
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-podcast-bot.svg" width="1200" height="630" loading="lazy" alt="Illustration: a phone with a question and an answer that quotes a passage, headphones, a sound wave, a football and transcript sheets."></figure>
         <h3>Podcast Q&amp;A bot and podcast-intel</h3>
-        <p>The panel of a football podcast asks the bot in Hebrew, on Telegram, what was said about something in past episodes, and the answer quotes the passages it found. The transcription side, podcast-intel, is open source.</p>
+        <p>The panel of a football podcast wanted to find what was said about a topic in past episodes. I built a bot they ask in Hebrew on Telegram, and it answers by quoting the passages it found. Its transcription side, podcast-intel, is open source.</p>
         <p class="links">
           <a href="https://github.com/YoavMayer/podcast-intel">podcast-intel on GitHub</a>
           <span class="private">bot repo private, demo on request</span>
         </p>
       </article>
 
-      <article class="card short">
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-reserve-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
         <h3>Reserve unit web app</h3>
-        <p>A reserve unit ran its call-ups and duty rosters out of spreadsheets. I co-built the web app that replaced them, and it's in pilot with the unit now.</p>
+        <p>A reserve unit ran its call-ups, availability and duty rosters on spreadsheets. I co-built the web app that replaced them, and it's in pilot with the unit now.</p>
         <p class="links"><span class="private">private repo, demo on request</span></p>
-      </article>
-
-      <article class="card short">
-        <h3>Claude Code skills</h3>
-        <p>I package repeat jobs as Claude Code skills, each with its own automated test. One set lets a family member make a printed photo book from Google Photos or a local folder, with a click-by-click guide into the desktop photo-book software.</p>
       </article>
 
     </div>
 
+    <section class="strip" aria-labelledby="clients">
+      <h2 class="section" id="clients">What clients say</h2>
+      <p>If we worked together, I'd be glad to <a href="mailto:yoavmayer@gmail.com?subject=A%20line%20for%20your%20site">get a sentence from you</a> for this page.</p>
+    </section>
+
     <section class="strip" aria-labelledby="home">
       <h2 class="section" id="home">Home builds</h2>
-      <p>At home I run a weekly grocery basket priced across Israeli supermarket chains from their published price files, and a Hebrew World Cup pool that replaced the spreadsheet my friends used to share.</p>
+      <p>At home I run a weekly grocery basket priced across Israeli supermarket chains from their published price files, and a Hebrew World Cup pool that replaced the spreadsheet my friends used to share. I also package jobs I kept doing by hand as Claude Code skills, each with its own automated test. One set takes a family member from Google Photos or a local folder to a printed photo book, with a click-by-click guide into the desktop photo-book software.</p>
     </section>
 
     <h2 class="section" id="arad">Before going independent</h2>
