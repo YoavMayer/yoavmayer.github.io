@@ -169,6 +169,7 @@
   <header class="topbar">
     <span class="site">yoavmayer.github.io</span>
     <nav aria-label="Sections">
+      <a href="#ai">ai</a>
       <a href="#projects">projects</a>
       <a href="#clients">clients</a>
       <a href="#arad">arad</a>
@@ -187,6 +188,17 @@
   </section>
 
   <main>
+    <section class="strip" aria-labelledby="ai">
+      <h2 class="section" id="ai">How I work with AI</h2>
+      <p>Having access to a model is not an achievement. I count a tool when it saves at least two hours a week, when someone else already uses it, or when a manual step is gone.</p>
+      <ul style="margin-top:14px">
+        <li><b>Time, by estimate.</b> For a small business, about 30 invoices a month went from 2 days to at most 20 minutes. A long flow became two approval buttons, and the rest is automatic. That is my estimate, not a measurement.</li>
+        <li><b>Used by others.</b> An open-source project replaced its dashboard with mine. Three of my changes are merged, in public.</li>
+        <li><b>New work, not saved time.</b> For a football podcast, there was almost no prep and most reels were never posted. Now the material is ready and I choose what goes out.</li>
+        <li><b>No promises ahead.</b> Past figures carry a label. I don't promise savings before seeing the work.</li>
+      </ul>
+    </section>
+
     <h2 class="section" id="projects">Projects</h2>
     <div class="cards">
 
@@ -196,9 +208,9 @@
         <h3>Invoicing for a small business</h3>
         <dl class="parts">
           <dt>For</dt><dd>The owner of a small business.</dd>
-          <dt>The problem</dt><dd>She invoiced by hand. She told me 20 invoices used to take her a day, sometimes two, at more than 10 clicks each.</dd>
+          <dt>The problem</dt><dd>She invoiced by hand, at more than 10 clicks each.</dd>
           <dt>What I did</dt><dd>I built a service that makes each invoice from her monday.com CRM and waits for her approval before her invoicing system issues it.</dd>
-          <dt>Result</dt><dd>Now there's one button, to confirm the exact text before it goes to the customer, and she may drop that step too once she trusts it.</dd>
+          <dt>Result</dt><dd>A long flow became two approval buttons, and the rest is automatic. About 30 invoices a month went from 2 days to at most 20 minutes, by my estimate, not measured.</dd>
         </dl>
       </article>
 
@@ -207,7 +219,7 @@
         <p class="status">Open source, three of my changes merged</p>
         <h3>Babysitter observer dashboard</h3>
         <dl class="parts">
-          <dt>For</dt><dd>Teams that hand long jobs to AI agents with Babysitter, an open-source tool with 1,855 stars on GitHub.</dd>
+          <dt>For</dt><dd>Teams that hand long jobs to AI agents with Babysitter, an open-source tool with 1,898 stars on GitHub (November 2026).</dd>
           <dt>The problem</dt><dd>The agents stop at the steps where a person has to say yes. In the old dashboard that approval never reached them, and nothing showed an error.</dd>
           <dt>What I did</dt><dd>I built a new dashboard where you watch the agents work and give the approval. In August 2026 the project replaced the old one with mine.</dd>
           <dt>Result</dt><dd>An approval given on the dashboard now reaches the agents.</dd>
@@ -220,11 +232,11 @@
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-interpretation.svg" width="1200" height="630" loading="lazy" alt="Illustration: a microphone on a stage, a speech bubble with a Hebrew letter and one with an English letter, a sound wave into an earpiece, and a glossary with a check mark."></figure>
-        <p class="status">In progress for an upcoming medical conference</p>
+        <p class="status">Ran live at a medical conference, 4 and 5 November 2026</p>
         <h3>Live Hebrew to English interpretation</h3>
-        <p>At an upcoming medical conference the lecturers will speak Hebrew, and the people in the hall who only speak English will hear each talk in English through an earpiece while the lecturer is still talking. I'm building that interpretation.</p>
-        <p class="body">A language model, called over its API, checks every clause against a medical glossary before it is read out. The model is a swappable part: today it is Claude Sonnet, and Gemini or an OpenAI model can take its place. When a check fails, the plain draft plays, so the earpiece doesn't go quiet.</p>
-        <p class="problem">In my latest test on four talks it got 184 of the 185 glossary terms right.</p>
+        <p>At a medical conference the lecturers spoke Hebrew, and people in the hall who only speak English followed each talk in English on their phones while the lecturer was still talking. I built that interpretation. It was not a clean run: the first day had stalls and drops.</p>
+        <p class="body">A language model, called over its API, checks every clause against a medical glossary before it is read out. The model is a swappable part: today it is Claude Sonnet, and Gemini or an OpenAI model can take its place. When a check fails, the plain draft plays instead.</p>
+        <p class="problem">In a simulated test on four talks, before the event, it got 184 of the 185 glossary terms right.</p>
       </article>
 
       <article class="card">
@@ -239,8 +251,8 @@
         <dl class="parts">
           <dt>For</dt><dd>My own research. I give it a topic.</dd>
           <dt>The problem</dt><dd>A report written by AI can state things its sources don't say.</dd>
-          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It runs by itself every night on the next topic in the queue.</dd>
-          <dt>Result</dt><dd>62 reports checked so far.</dd>
+          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It ran every night on the next topic in the queue until October 2026, when I stopped it because I wasn't reading the reports.</dd>
+          <dt>Result</dt><dd>83 reports checked.</dd>
         </dl>
         <p class="links"><span class="private">private repo</span></p>
       </article>
@@ -258,7 +270,7 @@
       <article class="card">
         <figure class="shot"><img src="assets/illus-reserve-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
         <h3>Reserve unit web app</h3>
-        <p>A reserve unit ran its call-ups, availability and duty rosters on spreadsheets. I co-built the web app that replaced them, and it's in pilot with the unit now.</p>
+        <p>I co-built a web app that combines central staff records with rostering and manpower during a reserve unit's activation. It is built and other units are evaluating it. My own unit is not on activation, so it is not in use now.</p>
         <p class="links"><span class="private">private repo, demo on request</span></p>
       </article>
 
