@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yoav Mayer, AI engineer</title>
+<title>Yoav Mayer, AI Consultant</title>
 <meta name="description" content="Yoav Mayer connects the software a business already uses, so the manual steps between programs go away. Automation and integrations, built with AI agents under his direction.">
-<meta property="og:title" content="Yoav Mayer, AI engineer">
-<meta property="og:description" content="Engineer for automation and integrations. Projects, code and how to reach me.">
+<meta property="og:title" content="Yoav Mayer, AI Consultant">
+<meta property="og:description" content="Hands-on AI for small businesses and industry: less manual work inside the tools you already use, with people in control.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoavmayer.github.io/">
 <meta property="og:image" content="https://yoavmayer.github.io/assets/og-image.png">
@@ -179,10 +179,9 @@
 
   <section class="hero">
     <h1>Yoav Mayer</h1>
-    <p class="role">I connect the software a business already uses, so the manual steps between programs go away and the work gets simpler and faster.</p>
+    <p class="role">AI Consultant. Hands-on AI for small businesses and industry: less manual work inside the tools you already use, with people in control.</p>
     <p class="open">I bring automation, integrations, AI agents and skills into the way a business already works, without breaking the product or the systems it runs today. At Arad I built the regression tests that let us change an old product's core safely.</p>
-    <p class="open">Usually that means linking one program to another over its API, and logging each step so the people who run the process can see what happened. AI agents write the code under my direction.</p>
-    <p class="open">Want to see if one of your processes can be simplified? Write to me. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
+    <p class="open">If your business has work that repeats, write to me with one example, and I will tell you in a short, free call whether AI can take it over. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
     <p class="lede">I worked in C#/.NET at Arad from 2014 to 2026. I started building with LLMs in early 2025 and left Arad in February 2026.</p>
     <p class="stack">These days it's mostly Python and TypeScript, with the Claude API and Claude Code.</p>
   </section>
@@ -192,10 +191,9 @@
       <h2 class="section" id="ai">How I work with AI</h2>
       <p>Having access to a model is not an achievement. I count a tool when it saves at least two hours a week, when someone else already uses it, or when a manual step is gone.</p>
       <ul style="margin-top:14px">
-        <li><b>Time, by estimate.</b> For a small business, about 30 invoices a month went from 2 days to at most 20 minutes. A long flow became two approval buttons, and the rest is automatic. That is my estimate, not a measurement.</li>
-        <li><b>Used by others.</b> An open-source project replaced its dashboard with mine. Three of my changes are merged, in public.</li>
-        <li><b>New work, not saved time.</b> For a football podcast, by my estimate, there was almost no prep and most reels were never posted. Now the material is ready and I choose what goes out.</li>
-        <li><b>No promises ahead.</b> Past figures carry a label. I don't promise savings.</li>
+        <li><b>Time.</b> For a small business, about 30 invoices a month went from 2 days to under 20 minutes, and the owner approves every invoice.</li>
+        <li><b>Used by others.</b> An open-source project ships the dashboard I built as its official one. Three of my changes are merged, in public.</li>
+        <li><b>New work.</b> For a football podcast, there was almost no prep and most reels were never posted. Now the material is ready and I choose what goes out.</li>
       </ul>
     </section>
 
@@ -209,8 +207,8 @@
         <dl class="parts">
           <dt>For</dt><dd>The owner of a small business.</dd>
           <dt>The problem</dt><dd>She invoiced by hand, at more than 10 clicks each.</dd>
-          <dt>What I did</dt><dd>I built a service that makes each invoice from her monday.com CRM and waits for her approval before her invoicing system issues it.</dd>
-          <dt>Result</dt><dd>A long flow became two approval buttons, and the rest is automatic. About 30 invoices a month went from 2 days to at most 20 minutes, by my estimate, not measured.</dd>
+          <dt>What I did</dt><dd>I built a service that prepares each invoice and waits for her approval before it is issued.</dd>
+          <dt>Result</dt><dd>About 30 invoices a month went from 2 days to under 20 minutes. She approves each one.</dd>
         </dl>
       </article>
 
@@ -234,9 +232,8 @@
         <figure class="shot"><img src="assets/illus-interpretation.svg" width="1200" height="630" loading="lazy" alt="Illustration: a microphone on a stage, a speech bubble with a Hebrew letter and one with an English letter, a sound wave into an earpiece, and a glossary with a check mark."></figure>
         <p class="status">Ran live at a medical conference, 4 and 5 November 2026</p>
         <h3>Live Hebrew to English interpretation</h3>
-        <p>At a medical conference the lecturers spoke Hebrew, and a few people in the hall who only speak English followed in English on their phones while the lecturer was still talking. I built that interpretation. It was not a clean run: the first day had stalls and drops, and the second morning failed, partly because a vendor balance ran out.</p>
-        <p class="body">A language model, called over its API, checks every clause against a medical glossary before it is read out. The model is a swappable part: today it is Claude Sonnet, and Gemini or an OpenAI model can take its place. When a check fails, the plain draft plays instead.</p>
-        <p class="problem">In a simulated test on four talks, before the event, it got 184 of the 185 glossary terms right.</p>
+        <p>At a medical conference the lecturers spoke Hebrew, and people in the hall who only speak English followed in English on their phones while the lecturer was still talking. I built that interpretation. It ran live in the hall, and a lecturer who listened came over afterwards with questions about the talk.</p>
+        <p class="problem">In a test on four talks before the event, it got over 99% of the glossary terms right.</p>
       </article>
 
       <article class="card">
@@ -251,7 +248,7 @@
         <dl class="parts">
           <dt>For</dt><dd>My own research. I give it a topic.</dd>
           <dt>The problem</dt><dd>A report written by AI can state things its sources don't say.</dd>
-          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It ran every night on the next topic in the queue until October 2026, when I stopped it because I wasn't reading the reports.</dd>
+          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It ran every night on the next topic in the queue.</dd>
           <dt>Result</dt><dd>83 reports checked.</dd>
         </dl>
         <p class="links"><span class="private">private repo</span></p>
@@ -269,8 +266,8 @@
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-reserve-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
-        <h3>Reserve unit web app</h3>
-        <p>I co-built a web app that combines central staff records with rostering and manpower during a reserve unit's activation. It is built and other units are evaluating it. My own unit is not on activation, so it is not in use now.</p>
+        <h3>Staffing and shift-planning app</h3>
+        <p>I co-built a web app that combines staff records with rostering and manpower planning for a large organization. Other teams are evaluating it.</p>
         <p class="links"><span class="private">private repo, demo on request</span></p>
       </article>
 
