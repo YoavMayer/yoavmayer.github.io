@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Yoav Mayer, AI Consultant</title>
-<meta name="description" content="Yoav Mayer connects the software a business already uses, so the manual steps between programs go away. Automation and integrations, built with AI agents under his direction.">
-<meta property="og:title" content="Yoav Mayer, AI Consultant">
-<meta property="og:description" content="Hands-on AI for small businesses and industry: less manual work inside the tools you already use, with people in control.">
+<title>Yoav Mayer, AI Solutions Engineer</title>
+<meta name="description" content="Yoav Mayer, AI Solutions Engineer. I connect the systems a business already runs and automate the work repeated between them, without breaking what works.">
+<meta property="og:title" content="Yoav Mayer, AI Solutions Engineer">
+<meta property="og:description" content="I connect the systems a business already runs and automate the work repeated between them, without breaking what works.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://yoavmayer.github.io/">
 <meta property="og:image" content="https://yoavmayer.github.io/assets/og-image.png">
@@ -171,7 +171,6 @@
     <nav aria-label="Sections">
       <a href="#ai">ai</a>
       <a href="#projects">projects</a>
-      <a href="#clients">clients</a>
       <a href="#arad">arad</a>
       <a href="#contact">contact</a>
     </nav>
@@ -179,21 +178,21 @@
 
   <section class="hero">
     <h1>Yoav Mayer</h1>
-    <p class="role">AI Consultant. Hands-on AI for small businesses and industry: less manual work inside the tools you already use, with people in control.</p>
-    <p class="open">I bring automation, integrations, AI agents and skills into the way a business already works, without breaking the product or the systems it runs today. At Arad I built the regression tests that let us change an old product's core safely.</p>
-    <p class="open">If your business has work that repeats, write to me with one example, and I will tell you in a short, free call whether AI can take it over. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
-    <p class="lede">I worked in C#/.NET at Arad from 2014 to 2026. I started building with LLMs in early 2025 and left Arad in February 2026.</p>
-    <p class="stack">These days it's mostly Python and TypeScript, with the Claude API and Claude Code.</p>
+    <p class="role"><span>AI Solutions Engineer.</span> Hands-on AI agents, automation and integrations, without breaking what works.</p>
+    <p class="open">I am an engineer who connects the systems your team already uses and automates the work repeated between them. Think of the same data copied by hand from one program to another every week. I start from how you work today, and a person still approves what matters.</p>
+    <p class="open">Have work like that? Send me one example, and in a short call I will tell you whether it can be automated and what it takes. <a href="mailto:yoavmayer@gmail.com">yoavmayer@gmail.com</a></p>
+    <p class="lede">Before going independent in March 2026, I spent seven years as team leader of the automation and software infrastructure team at Arad Technologies, in industrial R&amp;D. I wrote C#/.NET there from 2014 and have built with language models since early 2025.</p>
+    <p class="stack">Today: Python, TypeScript, a language model over its API (swappable) and Claude Code.</p>
   </section>
 
   <main>
     <section class="strip" aria-labelledby="ai">
       <h2 class="section" id="ai">How I work with AI</h2>
-      <p>Having access to a model is not an achievement. I count a tool when it saves at least two hours a week, when someone else already uses it, or when a manual step is gone.</p>
+      <p>I count a tool only when it saves real time every week, when other people use it, or when a manual step is gone.</p>
       <ul style="margin-top:14px">
-        <li><b>Time.</b> For a small business, about 30 invoices a month went from 2 days to under 20 minutes, and the owner approves every invoice.</li>
-        <li><b>Used by others.</b> An open-source project ships the dashboard I built as its official one. Three of my changes are merged, in public.</li>
-        <li><b>New work.</b> For a football podcast, there was almost no prep and most reels were never posted. Now the material is ready and I choose what goes out.</li>
+        <li><b>Time.</b> For a small business, over 85% of the manual invoicing work is gone, and the owner still approves every invoice.</li>
+        <li><b>Used by others.</b> An open-source AI agent project replaced its own dashboard with mine.</li>
+        <li><b>New work.</b> A Hebrew podcast spent a lot of time on prep and had barely any social clips. Now a set of agents does the prep and makes the clips, and I choose what goes out.</li>
       </ul>
     </section>
 
@@ -203,24 +202,24 @@
       <article class="card">
         <figure class="shot"><img src="assets/illus-invoicing.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop showing a board of invoice rows, a dotted path to an invoice with a check mark, and one approve button."></figure>
         <p class="status">In production</p>
-        <h3>Invoicing for a small business</h3>
+        <h3>CRM to invoicing integration for a small business</h3>
         <dl class="parts">
           <dt>For</dt><dd>The owner of a small business.</dd>
-          <dt>The problem</dt><dd>She invoiced by hand, at more than 10 clicks each.</dd>
-          <dt>What I did</dt><dd>I built a service that prepares each invoice and waits for her approval before it is issued.</dd>
-          <dt>Result</dt><dd>About 30 invoices a month went from 2 days to under 20 minutes. She approves each one.</dd>
+          <dt>The problem</dt><dd>Every invoice was retyped by hand from her CRM into her invoicing system.</dd>
+          <dt>What I did</dt><dd>I connected the two systems through their APIs and webhooks, with logging and a trace from every CRM record to its invoice. Each invoice waits for her approval before it is issued.</dd>
+          <dt>Result</dt><dd>Over 85% of the manual invoicing work is gone.</dd>
         </dl>
       </article>
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-observer.svg" width="1200" height="630" loading="lazy" alt="Illustration: a drawn laptop showing a blurred screenshot of my own dashboard, with check marks, a progress card and a badge for a run that is waiting for a person."></figure>
-        <p class="status">Open source, three of my changes merged</p>
+        <p class="status">Open source, merged upstream and published on npm</p>
         <h3>Babysitter observer dashboard</h3>
         <dl class="parts">
-          <dt>For</dt><dd>Teams that hand long jobs to AI agents with Babysitter, an open-source tool with 1,898 stars on GitHub (November 2026).</dd>
-          <dt>The problem</dt><dd>The agents stop at the steps where a person has to say yes. In the old dashboard that approval never reached them, and nothing showed an error.</dd>
+          <dt>For</dt><dd>Teams that hand long jobs to AI agents with Babysitter, an open-source framework for running AI agents.</dd>
+          <dt>The problem</dt><dd>AI agents pause when a person has to approve a step. In the old dashboard the approval never got through, and nothing showed an error.</dd>
           <dt>What I did</dt><dd>I built a new dashboard where you watch the agents work and give the approval. In August 2026 the project replaced the old one with mine.</dd>
-          <dt>Result</dt><dd>An approval given on the dashboard now reaches the agents.</dd>
+          <dt>Result</dt><dd>One screen shows every agent job, how long each step took, what got stuck and what waits for a person's OK, and can bring back any past run. Approvals now get through.</dd>
         </dl>
         <p class="links">
           <a href="https://github.com/a5c-ai/babysitter/tree/main/packages/observer-dashboard">Dashboard in the Babysitter repo</a>
@@ -231,67 +230,68 @@
       <article class="card">
         <figure class="shot"><img src="assets/illus-interpretation.svg" width="1200" height="630" loading="lazy" alt="Illustration: a microphone on a stage, a speech bubble with a Hebrew letter and one with an English letter, a sound wave into an earpiece, and a glossary with a check mark."></figure>
         <p class="status">Ran live at a medical conference, 4 and 5 November 2026</p>
-        <h3>Live Hebrew to English interpretation</h3>
-        <p>At a medical conference the lecturers spoke Hebrew, and people in the hall who only speak English followed in English on their phones while the lecturer was still talking. I built that interpretation. It ran live in the hall, and a lecturer who listened came over afterwards with questions about the talk.</p>
-        <p class="problem">In a test on four talks before the event, it got over 99% of the glossary terms right.</p>
+        <h3>Live translation at a medical conference</h3>
+        <p>At an Israeli medical conference the lecturers spoke Hebrew, and visiting doctors read and heard the talks in English on their own phones while the lecturer was still talking. I built that app: speech to text, then translation by a language model over its API, checked against a medical glossary.</p>
+        <p class="problem">Before the event it was tested on recorded talks it had not seen. It works for any source language.</p>
       </article>
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-chatbot.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a phone with a short chat, a shield with a check on one answer, a hand-off to a person with a headset, and a small shop."></figure>
-        <h3>A chatbot for a small business</h3>
-        <p>For a small business, I mapped the process behind its chatbot and set the direction for how it should work. The production build is not mine.</p>
+        <h3>A product-advice chatbot for a small business</h3>
+        <p>I built a product-advice chatbot demo from a small business's product sheet. The spec showed the product data needed cleanup and clear categories before any bot could answer reliably, so the plan starts there.</p>
       </article>
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-research.svg" width="1200" height="630" loading="lazy" alt="Illustration: a report with each claim ticked and one crossed out, source sheets, a magnifier, a moon for the nightly run and a rewrite loop."></figure>
         <h3>Research reports that get fact-checked</h3>
         <dl class="parts">
-          <dt>For</dt><dd>My own research. I give it a topic.</dd>
+          <dt>For</dt><dd>Anyone who makes decisions from written research.</dd>
           <dt>The problem</dt><dd>A report written by AI can state things its sources don't say.</dd>
-          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent goes through it claim by claim against the sources, and if too many fail, the report goes back for a rewrite. It ran every night on the next topic in the queue.</dd>
-          <dt>Result</dt><dd>83 reports checked.</dd>
+          <dt>What I did</dt><dd>One agent writes a sourced report. A second agent checks every cited claim against its source page and sends failures back for a rewrite.</dd>
+          <dt>Result</dt><dd>No report is released until every cited claim matches its source page.</dd>
         </dl>
         <p class="links"><span class="private">private repo</span></p>
       </article>
 
       <article class="card">
         <figure class="shot"><img src="assets/illus-podcast-bot.svg" width="1200" height="630" loading="lazy" alt="Illustration: a phone with a question and an answer that quotes a passage, headphones, a sound wave, a football and transcript sheets."></figure>
-        <h3>Podcast Q&amp;A bot and podcast-intel</h3>
-        <p>The panel of a football podcast wanted to find what was said about a topic in past episodes. I built a bot they ask in Hebrew on Telegram, and it answers by quoting the passages it found. Its transcription side, podcast-intel, is open source.</p>
+        <h3>A multi-agent system for a Hebrew podcast</h3>
+        <p>A Hebrew podcast spent a lot of time on episode prep and had almost no social clips. I built and run a set of agents its hosts and panelists use: nightly transcription, research briefs before each episode, reels with proofread subtitles, analysis after each episode, and a Telegram bot that answers questions by quoting past episodes. It saves the hosts a lot of prep and produces the social clips. The transcription side, podcast-intel, is open source.</p>
         <p class="links">
           <a href="https://github.com/YoavMayer/podcast-intel">podcast-intel on GitHub</a>
-          <span class="private">bot repo private, demo on request</span>
+          <span class="private">system repo private, demo on request</span>
         </p>
       </article>
 
       <article class="card">
-        <figure class="shot"><img src="assets/illus-reserve-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
+        <figure class="shot"><img src="assets/illus-skills.svg" width="1200" height="630" loading="lazy" alt="Illustration: a laptop terminal with a passing test check and an open photo book with picture placeholders, puzzle pieces around them."></figure>
+        <h3>Photo books, with AI doing the sorting</h3>
+        <p>Making a printed photo book meant sorting and picking every photo by hand. I packaged the work as Claude skills that sort photos by date, shortlist photos for a person to choose, group faces and lay out print-ready pages, with an installer and a click-by-click guide that people without a technical background run on their own. It cut the manual work by over 80%.</p>
+      </article>
+
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-staffing-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
         <h3>Staffing and shift-planning app</h3>
-        <p>I co-built a web app that combines staff records with rostering and manpower planning for a large organization. Other teams are evaluating it.</p>
+        <p>I co-built a web app that moved an organization's availability and duty rosters off spreadsheets. People use it today.</p>
         <p class="links"><span class="private">private repo, demo on request</span></p>
       </article>
 
     </div>
 
-    <section class="strip" aria-labelledby="clients">
-      <h2 class="section" id="clients">What clients say</h2>
-      <p>If we worked together, I'd be glad to <a href="mailto:yoavmayer@gmail.com?subject=A%20line%20for%20your%20site">get a sentence from you</a> for this page.</p>
-    </section>
-
     <section class="strip" aria-labelledby="home">
       <h2 class="section" id="home">Home builds</h2>
-      <p>At home I run a weekly grocery basket priced across Israeli supermarket chains from their published price files, and a Hebrew World Cup pool that replaced the spreadsheet my friends used to share. I also package jobs I kept doing by hand as Claude Code skills, each with its own automated test. One set takes a family member from Google Photos or a local folder to a printed photo book, with a click-by-click guide into the desktop photo-book software.</p>
+      <p>At home I turn repeated chores into small automations: a weekly grocery basket priced across Israeli supermarket chains, a Hebrew World Cup pool that replaced my friends' shared spreadsheet, a monthly family finance report and event-ticket alerts.</p>
     </section>
 
     <h2 class="section" id="arad">At Arad Technologies</h2>
     <article class="card arad">
       <p class="status">December 2018 to February 2026</p>
-      <h3>Automation and software infrastructure team leader, R&amp;D, Arad Technologies</h3>
+      <h3>Automation and software infrastructure team leader, Arad Technologies</h3>
       <ul>
-        <li>Led five engineers and subcontractors, and owned the shared .NET tooling of the R&amp;D department.</li>
-        <li>Built a .NET calibration platform from the test bench to the live production line.</li>
+        <li>Led a team of five (developers, DevOps, QA) plus a development subcontractor, and owned the shared .NET tooling of the R&amp;D department.</li>
+        <li>Made calibration at least 4x faster and ended waits on subcontractor firmware releases by moving most processing off the meter's embedded card into a .NET service with the team. Brought the new platform from requirements to the production line, leading its integration and Scrum delivery.</li>
         <li>Led the design and build of an in-house C# application for all communication with the meter: read and write commands, log downloads and over-the-air firmware updates.</li>
-        <li>Owned the hardware and software testers for the meter's communication protocols on the production line, and wrote the C# test automation the firmware team runs during development and on each official release.</li>
+        <li>Owned the hardware and software testers for the meter's communication protocols on the production line, and automated over 70% of the firmware team's regression testing, with the team, through C# tests run during development and on every official release.</li>
         <li>Moved the team from SVN to Git on Azure DevOps with CI/CD.</li>
         <li>Trained the production engineers and subcontractors who used the team's tools.</li>
       </ul>
