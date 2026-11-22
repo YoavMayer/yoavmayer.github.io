@@ -205,10 +205,20 @@
         <h3>CRM to invoicing integration for a small business</h3>
         <dl class="parts">
           <dt>For</dt><dd>The owner of a small business.</dd>
-          <dt>The problem</dt><dd>Every invoice was retyped by hand from her CRM into her invoicing system.</dd>
-          <dt>What I did</dt><dd>I connected the two systems through their APIs and webhooks, with logging and a trace from every CRM record to its invoice. Each invoice waits for her approval before it is issued.</dd>
+          <dt>The problem</dt><dd>Every invoice was retyped by hand from her CRM into her invoicing system, sent to the client by email with a copied link, and the CRM was then updated by hand.</dd>
+          <dt>What I did</dt><dd>After mapping the process with her, I connected the two systems through their APIs and webhooks. A deal's status now prepares the invoice, one click from her sends it to the client with the PDF, and the CRM updates itself. A deal is never billed twice, and every invoice traces back to its CRM record.</dd>
           <dt>Result</dt><dd>Over 85% of the manual invoicing work is gone.</dd>
         </dl>
+      </article>
+
+      <article class="card">
+        <figure class="shot"><img src="assets/illus-podcast-bot.svg" width="1200" height="630" loading="lazy" alt="Illustration: a phone with a question and an answer that quotes a passage, headphones, a sound wave, a football and transcript sheets."></figure>
+        <h3>A multi-agent system for a Hebrew podcast</h3>
+        <p>A Hebrew podcast spent a lot of time on episode prep and had almost no social clips. I built a set of agents its hosts and panelists use: nightly transcription, research briefs before each episode, reels with proofread subtitles, analysis after each episode, and a Telegram bot that answers questions by quoting past episodes. It saves the hosts a lot of prep and produces the social clips. The transcription side, podcast-intel, is open source.</p>
+        <p class="links">
+          <a href="https://github.com/YoavMayer/podcast-intel">podcast-intel on GitHub</a>
+          <span class="private">system repo private, demo on request</span>
+        </p>
       </article>
 
       <article class="card">
@@ -236,12 +246,6 @@
       </article>
 
       <article class="card">
-        <figure class="shot"><img src="assets/illus-chatbot.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a phone with a short chat, a shield with a check on one answer, a hand-off to a person with a headset, and a small shop."></figure>
-        <h3>A product-advice chatbot for a small business</h3>
-        <p>I built a product-advice chatbot demo from a small business's product sheet. The spec showed the product data needed cleanup and clear categories before any bot could answer reliably, so the plan starts there.</p>
-      </article>
-
-      <article class="card">
         <figure class="shot"><img src="assets/illus-research.svg" width="1200" height="630" loading="lazy" alt="Illustration: a report with each claim ticked and one crossed out, source sheets, a magnifier, a moon for the nightly run and a rewrite loop."></figure>
         <h3>Research reports that get fact-checked</h3>
         <dl class="parts">
@@ -254,28 +258,16 @@
       </article>
 
       <article class="card">
-        <figure class="shot"><img src="assets/illus-podcast-bot.svg" width="1200" height="630" loading="lazy" alt="Illustration: a phone with a question and an answer that quotes a passage, headphones, a sound wave, a football and transcript sheets."></figure>
-        <h3>A multi-agent system for a Hebrew podcast</h3>
-        <p>A Hebrew podcast spent a lot of time on episode prep and had almost no social clips. I built and run a set of agents its hosts and panelists use: nightly transcription, research briefs before each episode, reels with proofread subtitles, analysis after each episode, and a Telegram bot that answers questions by quoting past episodes. It saves the hosts a lot of prep and produces the social clips. The transcription side, podcast-intel, is open source.</p>
-        <p class="links">
-          <a href="https://github.com/YoavMayer/podcast-intel">podcast-intel on GitHub</a>
-          <span class="private">system repo private, demo on request</span>
-        </p>
-      </article>
-
-      <article class="card">
         <figure class="shot"><img src="assets/illus-skills.svg" width="1200" height="630" loading="lazy" alt="Illustration: a laptop terminal with a passing test check and an open photo book with picture placeholders, puzzle pieces around them."></figure>
         <h3>Photo books, with AI doing the sorting</h3>
         <p>Making a printed photo book meant sorting and picking every photo by hand. I packaged the work as Claude skills that sort photos by date, shortlist photos for a person to choose, group faces and lay out print-ready pages, with an installer and a click-by-click guide that people without a technical background run on their own. It cut the manual work by over 80%.</p>
       </article>
 
       <article class="card">
-        <figure class="shot"><img src="assets/illus-staffing-app.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a laptop with a roster table, a phone with a colour-coded duty calendar, people icons and a check mark."></figure>
-        <h3>Staffing and shift-planning app</h3>
-        <p>I co-built a web app that moved an organization's availability and duty rosters off spreadsheets. People use it today.</p>
-        <p class="links"><span class="private">private repo, demo on request</span></p>
+        <figure class="shot"><img src="assets/illus-chatbot.svg" width="1200" height="630" loading="lazy" alt="Illustration with made-up content: a phone with a short chat, a shield with a check on one answer, a hand-off to a person with a headset, and a small shop."></figure>
+        <h3>A product-advice chatbot for a small business</h3>
+        <p>I built a product-advice chatbot demo from a small business's product sheet. The spec showed the product data needed cleanup and clear categories before any bot could answer reliably, so the plan starts there.</p>
       </article>
-
     </div>
 
     <section class="strip" aria-labelledby="home">
